@@ -11,7 +11,7 @@ backup_num=5
 # 存档
 auto_save(){
     date=$(date +"%Y-%m-%d")
-    time=$(date +"%H:%M:%S")
+    time=$(date +"%H%M%S")
     mkdir -p "$target_dir"
     tar -czf "$target_dir/Saved_${date}_${time}.tar.gz" -C "$game_dir/Pal/Saved" .
     echo "存档已经备份到 $target_dir"
